@@ -4,14 +4,16 @@ import { SessionService } from "../services/SessionService";
 
 export class LoginContoller {
 
-    public async checkLogin(user:string, password: string):Promise<void> {
-        let loginService:LoginService = ????;
-        let sessionService:SessionService = ???;
+    constructor(
+        private loginService: LoginService,
+        private sessionService: SessionService){}
 
-        let userObject:User = await loginService.login(user,password);
-        await sessionService.saveUser(userObject);
+    public async checkLogin(user:string, password: string):Promise<boolean> {
+        let userObject:User = await this.loginService.login(user,password);
+        await this.sessionService.saveUser(userObject);
 
         // Redirection de la page
-
+        //window.location = "https://....";
+        return true;
     }
 }
