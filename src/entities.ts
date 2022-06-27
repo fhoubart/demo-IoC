@@ -1,8 +1,8 @@
-export class User {
+export interface User {
     userId: string;
 }
 
-export class Task {
+export interface Task {
     titleId: string;
     title: string;
     description: string;

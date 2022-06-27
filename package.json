@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fhoubart/demo-IoC/issues"
   },
-  "homepage": "https://github.com/fhoubart/demo-IoC#readme"
+  "homepage": "https://github.com/fhoubart/demo-IoC#readme",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
 }
